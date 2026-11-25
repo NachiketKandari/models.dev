@@ -1,5 +1,6 @@
 # Source: https://blazeinfer.ai/models and https://blazeinfer.ai/docs (accessed 2026-11-21).
-# Pricing and limits: host catalog, USD per 1M tokens; context 1,310,720.
+# Pricing and limits: host catalog, USD per 1M tokens; context 1,048,576
+# (largest accepted prompt 1,048,575 tokens, live probe 2026-11-24).
 # Output inherits the lab's 131,072 limit.
 # APIs: Chat Completions, Responses and Messages returned valid responses (live probes 2026-11-21).
 # Effort: reasoning_effort = low|high|max (default max). Live probes on 2026-11-21
@@ -23,7 +24,7 @@ structured_output = true
 cache = { implicit = true }
 
 [limit]
-context = 1_310_720
+context = 1_048_576
 
 [api.chat-completions]
 

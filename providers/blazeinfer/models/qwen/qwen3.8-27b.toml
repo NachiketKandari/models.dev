@@ -1,6 +1,5 @@
 # Source: https://blazeinfer.ai/models and https://blazeinfer.ai/docs (accessed 2026-11-21).
-# Pricing and limits: host catalog, USD per 1M tokens; context 128,000 and output 131,072.
-# The schema caps output at context, so the authored output is 128,000.
+# Pricing and limits: host catalog, USD per 1M tokens; context 131,072 and output 131,072.
 # APIs: Chat Completions, Responses and Messages returned valid responses (live probes 2026-11-21).
 # Toggle: chat_template_kwargs.enable_thinking = true|false
 # Effort: reasoning_effort = low|medium|xhigh (default xhigh)
@@ -22,8 +21,8 @@ structured_output = true
 cache = { implicit = true }
 
 [limit]
-context = 128_000
-output = 128_000
+context = 131_072
+output = 131_072
 
 [api.chat-completions]
 compatibility = { reasoning_field = "reasoning_content" }
