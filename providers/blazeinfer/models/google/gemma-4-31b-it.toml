@@ -1,5 +1,6 @@
 # Source: https://blazeinfer.ai/models and https://blazeinfer.ai/docs (accessed 2026-11-21).
-# Pricing and limits: host catalog, USD per 1M tokens; context 100,000 and output 16,384.
+# Pricing and limits: host catalog, USD per 1M tokens; context 81,920 and output 16,384
+# (largest accepted prompt 81,919 tokens, live probe 2026-11-24).
 # APIs: Chat Completions, Responses and Messages returned valid responses (live probes 2026-11-21).
 # Toggle: chat_template_kwargs.enable_thinking = true|false (default off)
 # Live probes on 2026-11-21: true enabled a reasoning trace; false returned none.
@@ -21,7 +22,7 @@ structured_output = true
 cache = { implicit = true }
 
 [limit]
-context = 100_000
+context = 81_920
 output = 16_384
 
 [api.chat-completions]
@@ -33,8 +34,8 @@ sdk = { aisdk = "@ai-sdk/anthropic", opencodeai = "@opencode/ai/providers/anthro
 sdk = { aisdk = "@ai-sdk/openai", opencodeai = "@opencode/ai/providers/openai-compatible/responses" }
 
 [cost.text.input]
-price = 0.3
-cache = { read = 0.1 }
+price = 0.14
+cache = { read = 0.05 }
 
 [cost.text.output]
-price = 1.25
+price = 0.4
